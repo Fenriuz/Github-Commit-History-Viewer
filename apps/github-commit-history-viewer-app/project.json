@@ -1,0 +1,74 @@
+{
+  "name": "github-commit-history-viewer-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/github-commit-history-viewer-app/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/github-commit-history-viewer-app"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "github-commit-history-viewer-app:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "github-commit-history-viewer-app:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "github-commit-history-viewer-app:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "github-commit-history-viewer-app:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "github-commit-history-viewer-app:build:development"
+        },
+        "production": {
+          "buildTarget": "github-commit-history-viewer-app:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/apps/github-commit-history-viewer-app"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/github-commit-history-viewer-app/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
