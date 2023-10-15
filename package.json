@@ -2,7 +2,9 @@
   "name": "@github-commit-history-viewer/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky install"
+  },
   "private": true,
   "dependencies": {
     "@swc/helpers": "~0.5.2",
@@ -38,7 +40,9 @@
     "eslint-plugin-playwright": "^0.15.3",
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "^8.0.0",
     "jsdom": "~22.1.0",
+    "lint-staged": "^15.0.1",
     "nx": "16.10.0",
     "prettier": "^2.6.2",
     "typescript": "~5.1.3",
