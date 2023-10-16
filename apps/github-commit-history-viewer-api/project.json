@@ -1,0 +1,64 @@
+{
+  "name": "github-commit-history-viewer-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/github-commit-history-viewer-api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/github-commit-history-viewer-api",
+        "main": "apps/github-commit-history-viewer-api/src/main.ts",
+        "tsConfig": "apps/github-commit-history-viewer-api/tsconfig.app.json",
+        "assets": ["apps/github-commit-history-viewer-api/src/assets"],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/github-commit-history-viewer-api/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "github-commit-history-viewer-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "github-commit-history-viewer-api:build:development"
+        },
+        "production": {
+          "buildTarget": "github-commit-history-viewer-api:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/github-commit-history-viewer-api/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/github-commit-history-viewer-api/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}
