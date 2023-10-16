@@ -12,7 +12,11 @@
     "@nestjs/core": "^10.0.2",
     "@nestjs/platform-express": "^10.0.2",
     "@swc/helpers": "~0.5.2",
+    "dayjs": "^1.11.10",
     "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-markdown": "^9.0.0",
+    "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0",
     "tslib": "^2.3.0"
   },
