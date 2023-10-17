@@ -16,7 +16,8 @@
         "tsConfig": "apps/github-commit-history-viewer-api/tsconfig.app.json",
         "assets": ["apps/github-commit-history-viewer-api/src/assets"],
         "isolatedConfig": true,
-        "webpackConfig": "apps/github-commit-history-viewer-api/webpack.config.js"
+        "webpackConfig": "apps/github-commit-history-viewer-api/webpack.config.js",
+        "generatePackageJson": true
       },
       "configurations": {
         "development": {},

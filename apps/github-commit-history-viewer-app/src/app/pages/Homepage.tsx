@@ -11,7 +11,7 @@ import { useAxios } from '../hooks/useAxios';
 import { Pagination } from '../components/Pagination';
 
 export function Homepage() {
-  const [baseUrl, setBaseUrl] = useState('https://github.com/facebook/react');
+  const [baseUrl, setBaseUrl] = useState(environment.defaultGithubProjectUrl);
   const [apiUrl, setApiUrl] = useState('');
   const [searchError, setSearchError] = useState('');
 
