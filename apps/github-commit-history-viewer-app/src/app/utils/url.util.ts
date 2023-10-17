@@ -10,7 +10,7 @@ export const updateUrlQueryParams = (urlStr: string, queryParams: PaginationPara
 };
 
 export const validateGitHubURL = (url: string) => {
-  const githubURLPattern = /^https:\/\/github\.com\/([A-Za-z0-9-_.]+)\/([A-Za-z0-9-_.]+)$/;
+  const githubURLPattern = /^https:\/\/github\.com\/([A-Za-z0-9-_.]+)\/([A-Za-z0-9-_.]+)\/?$/;
 
   if (githubURLPattern.test(url)) {
     const match = url.match(githubURLPattern);
