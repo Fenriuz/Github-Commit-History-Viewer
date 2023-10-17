@@ -11,3 +11,7 @@ interface Pagination {
 
 export type PaginationParams = Partial<Pagination>;
 
+export interface PaginationParamsComponent {
+  pagination?: PaginationParams;
+  updatePagination: (pagination: PaginationParams) => void;
+}
