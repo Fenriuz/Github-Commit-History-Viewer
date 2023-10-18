@@ -9,7 +9,8 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/github-commit-history-viewer-app"
+        "outputPath": "dist/apps/github-commit-history-viewer-app",
+        "generatePackageJson": true
       },
       "configurations": {
         "development": {

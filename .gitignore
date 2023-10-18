@@ -40,4 +40,5 @@ Thumbs.db
 
 # ENVs
 *.env
+!sample.env
 coso.sh
