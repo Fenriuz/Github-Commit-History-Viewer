@@ -1,7 +1,7 @@
 # GitHub Commit History Viewer
 Welcome to the GitHub Commit History Viewer! Explore Git commit history effortlessly with this GitHub Commit Viewer. See project changes and commit details in a user-friendly interface.
 ## Try the app
-[Demo](https://github-commit-history-viewer-218fkzhht-fenriuz.vercel.app/)
+[Demo](https://github-commit-history-viewer.vercel.app/)
 ## Instructions to run the project
 ### Setup
 Setup `.env` file:
